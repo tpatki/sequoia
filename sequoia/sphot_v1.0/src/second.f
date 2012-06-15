@@ -1,5 +1,5 @@
 
-      subroutine second(t)
+      subroutine msecond(t)
 
       include 'mpif.h'
 

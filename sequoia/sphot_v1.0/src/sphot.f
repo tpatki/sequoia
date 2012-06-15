@@ -81,9 +81,9 @@ c......
       CALL MPI_COMM_SIZE( MPI_COMM_WORLD, numMPItasks, ierr )
 
 
-      CALL second(progBeginTime)
+      CALL msecond(progBeginTime)
       CALL allocdyn
-      CALL second(t1)
+      CALL msecond(t1)
       allocateTime = t1 - progBeginTime
 
       CALL rdinput(NRuns)
@@ -125,16 +125,16 @@ c.... Zero out timing arays.....
  5    CONTINUE
 
 
-      CALL second(t2)
+      CALL msecond(t2)
       CALL seedranf(nRuns+1)
-      CALL second(seedGenTime)
+      CALL msecond(seedGenTime)
       seedGenTime = seedGenTime - t2
 
       CALL genmesh
       CALL genxsec
-      CALL second(tgen)
+      CALL msecond(tgen)
       tgen = tgen - t1
-      CALL second(loopBeginTime)
+      CALL msecond(loopBeginTime)
 
       CALL copyglob
 
@@ -174,7 +174,7 @@ c......are assumed to be SHARED.
 
       DO 1000 ict = 1, nThrRuns 
 
-         CALL second(t1)
+         CALL msecond(t1)
 
          CALL execute(ithRun, myStream, mySeed, nescgp, enesc, wcut, 
      &        wmin, wmax, wlost, wesc, wrr, wabs, wcen, epgain, etot,
@@ -183,7 +183,7 @@ c......are assumed to be SHARED.
 
          g_firstRanf(ithRun) = fRanBuf(thrID)
 
-         CALL second (t2)
+         CALL msecond (t2)
 
          tmp_wesc = 0.0
 !  
@@ -217,7 +217,7 @@ c......are assumed to be SHARED.
 
         endif
 
-         CALL second(t3)
+         CALL msecond(t3)
 
          r1 = ranf(mySeed)
 
@@ -308,7 +308,7 @@ c.....an SGI compiler bug.  Shouldn't need it, but we do.
          CALL MPI_BARRIER( MPI_COMM_WORLD, ierr )
        END IF
 
-       CALL second(loopEndTime)
+       CALL msecond(loopEndTime)
 
 
        IF( MPIid .eq. 0 ) CALL writeout(numMPItasks, numThreads)

@@ -12,7 +12,7 @@
       CALL MPI_COMM_SIZE( MPI_COMM_WORLD, numMPItasks, ierr )
       CALL MPI_COMM_RANK( MPI_COMM_WORLD, MPIid, ierr )
       
-      CALL second(tstart) 
+      CALL msecond(tstart) 
 
       do 901 j = 1, nzmax
          do 900 k = 1, 5
@@ -32,7 +32,7 @@
       do 904 j = 1, nrzmax
          ximpl(j)= g_ximpl(j)
  904  continue
-      CALL second(tstop)
+      CALL msecond(tstop)
       tdiff = tstop - tstart
 
       if( numMPItasks .eq. 1 )then

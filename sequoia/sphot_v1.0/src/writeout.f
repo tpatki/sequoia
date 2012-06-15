@@ -80,7 +80,7 @@ C#############################################################################
 
 
 
-      CALL second(progEndTime)
+      CALL msecond(progEndTime)
 
       loopWallClockTime = loopEndTime - loopBeginTime
       progWallClockTime = progEndTime - progBeginTime

@@ -11,12 +11,13 @@ PROG     = sphot
 # Specify linker/loader and flags as well as library directories and libs.
 # These can change depending on your preference and platform.
 #####
-#LDR      = newmpxlf
-LDR      = /usr/local/tools/compilers/ibm/mpxlf-9.1.0.8
+LDR      ?=mpif77
 #LDRFLAGS = -qsmp=omp
-LDRFLAGS = -qsmp=omp
-LIB_DIRS = 
-LIBS     = 
+LDRFLAGS = -fopenmp
+LIB_DIRS=
+LIBS=
+#LIB_DIRS =-Xlinker -rpath=$(HOME)/local/src/power/rapl/libmsr_blr/lib -L$(HOME)/local/src/power/rapl/libmsr_blr/lib
+#LIBS     = -lrapl
 ##### End of required modifications section
 
 
@@ -34,18 +35,15 @@ LIBS     =
 #$(PROG): src/*.f src/*.c includes/*
 #	make build;
 
-$(PROG): src/*.f includes/*
-	make build;
-
-build: 
-	make sources;
+$(PROG): sources src/*.f includes/*
 	cd bin; \
-	$(LDR)  $(LDRFLAGS) *.o -o $(PROG) $(LIB_DIRS) $(LIBS) ; \
+	$(LDR) $(LDRFLAGS) *.o -o $(PROG) $(LIB_DIRS) $(LIBS) ; \
 	mv $(PROG) ../.
 
 sources: 
-	cd src; make -f Makefile.src all
+	$(MAKE) -C src -f Makefile.src
 
 clean:
-	rm -f $(PROG); rm -f bin/*.o
+	rm -f $(PROG) bin/*.o
 
+.PHONY: sources

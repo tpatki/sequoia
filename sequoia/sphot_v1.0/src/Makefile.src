@@ -13,9 +13,8 @@ I = ../includes/*
 # Specify Fortran77 compiler and desired flags. 
 # These can change depending on your preference and platform.
 #####
-#F77 = newmpxlf
-F77 = /usr/local/tools/compilers/ibm/mpxlf-9.1.0.8
-FFLAGS   = -C -g -qsmp=omp -qnosave -c -I../includes
+F77 =mpif77
+FFLAGS   = -C -g -fopenmp -c -I../includes
 ##### End of required modifications section
 
 
@@ -69,7 +68,10 @@ FOBJS = \
 
 #all:  $(COBJS) $(FOBJS) $(I)
 
-all:  $(FOBJS) $(I)
+all: $(B) $(FOBJS) $(I)
+
+$(B):
+	mkdir -p $(B)
 
 $(B)allocdyn.o: allocdyn.f $(I)params.inc $(I)globals.inc $(I)geomz.inc $(I)randseed.inc
 	${F77} ${FFLAGS} -o $(B)allocdyn.o  allocdyn.f 
