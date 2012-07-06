@@ -1,0 +1,24 @@
+nodes=1 ntasks=1 threads-per-node=12
+++ export BMARK_STRING=sphot.12
+++ BMARK_STRING=sphot.12
++++ date +%Y_%m_%d_%H_%M_%S_%N
+++ name=2012_07_05_15_34_29_474387258
+++ mkdir 2012_07_05_15_34_29_474387258
+++ cd 2012_07_05_15_34_29_474387258
+++ env
+++ hostname
+++ echo 2012_07_05_15_34_29_474387258
+++ uname -a
+++ grep MHz
+++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
+++ echo 'threads-per-node: 12'
+++ echo 'nodes: 1'
+++ echo 1
+1
+++ echo 2012_07_05_15_34_29_474387258
+2012_07_05_15_34_29_474387258
+++ cp ../../input.dat ./input.dat
+++ cp ../../opac.txt ./opac.txt
+++ srun --nodes=1 --ntasks=1 -ppbatch -e sphot.err -o out.dat --auto-affinity=start=0,verbose,cpt=1 ../sphotCL.sh
++ i=2
++ '[' 2 -le 1 ']'

@@ -1,0 +1,26 @@
+nodes=1 ntasks=1 threads-per-node=16
+++ export BMARK_STRING=sphot.16
+++ BMARK_STRING=sphot.16
+++ export OMP_NUM_THREADS=16
+++ OMP_NUM_THREADS=16
++++ date +%Y_%m_%d_%H_%M_%S_%N
+++ name=2012_07_05_15_19_08_737856137
+++ mkdir 2012_07_05_15_19_08_737856137
+++ cd 2012_07_05_15_19_08_737856137
+++ env
+++ hostname
+++ echo 2012_07_05_15_19_08_737856137
+++ uname -a
+++ grep MHz
+++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
+++ echo 'threads-per-node: 16'
+++ echo 'nodes: 1'
+++ echo 1
+1
+++ echo 2012_07_05_15_19_08_737856137
+2012_07_05_15_19_08_737856137
+++ cp ../../input.dat ./input.dat
+++ cp ../../opac.txt ./opac.txt
+++ srun --nodes=1 --ntasks=1 -ppbatch -e sphot.err -o out.dat --auto-affinity=start=0,verbose,cpt=1 ../sphotCL.sh
+slurmd[sierra1909]: *** JOB 61508 CANCELLED AT 2012-07-05T15:24:33 ***
+srun: error: sierra1909: task 0: Terminated

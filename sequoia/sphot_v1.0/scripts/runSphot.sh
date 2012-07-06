@@ -11,7 +11,7 @@ i=$1
 while [ $i -le $2 ]
 do
       echo "nodes=$i ntasks=$i threads-per-node=$3"
-      ./runCL.sh $i $3
+       source ./runCL.sh $i $3
   i=$(($i*2))
 done
 

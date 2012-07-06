@@ -1,0 +1,43 @@
+#!/bin/bash
+#MSUB -lpartition=cab
+#MSUB -A asccasc
+#MSUB -l nodes=16
+#MSUB -q pbatch
+#MSUB -l walltime=02:30:00
+
+i=16
+minthreads=4
+
+j=1
+maxnodes=16
+
+while [ $j -le $maxnodes ]
+do
+i=16
+while [ $i -ge $minthreads ]
+do
+	export OMP_NUM_THREADS=$i
+
+	name=`date +%Y_%m_%d_%H_%M_%S_%N`
+	mkdir $name
+	cd $name
+	env > env
+	echo $name >> info
+	uname -a >> info
+	srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo | grep MHz >> info
+	srun --nodes=1 --ntasks=1 -o host_info hostname
+	echo 'threads/node: '$i >> info
+	echo 'nodes: ' $j >> info
+
+	cp ../../opac.txt .
+	cp ../../input.dat .
+
+	srun-mpip --nodes=$j --ntasks=$j -e f.err ../../sphot 
+
+	cd ../
+
+	i=$(($i-4))
+done
+	j=$(($j*2))
+done
+

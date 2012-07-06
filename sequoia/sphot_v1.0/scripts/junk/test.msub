@@ -1,0 +1,13 @@
+#!/bin/bash
+#MSUB -lpartition=sierra
+#MSUB -A asccasc
+#MSUB -l nodes=1
+#MSUB -q pbatch
+#MSUB -l walltime=00:45:00
+
+#Call the child script that does the runs
+
+sh ./runSphot.sh 1 1 12 
+#sh ./runSphot.sh 2 2 16
+#sh ./runSphot.sh 2 2 4
+#sh ./runSphot.sh 2 2 8

@@ -1,0 +1,48 @@
+nodes=1 ntasks=1 threads-per-node=16
++ export BMARK_STRING=sphot.16
++ BMARK_STRING=sphot.16
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_06_15_16_01_20_766727377
++ mkdir 2012_06_15_16_01_20_766727377
++ cd 2012_06_15_16_01_20_766727377
++ env
++ hostname
++ echo 2012_06_15_16_01_20_766727377
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ echo 'threads-per-node: 16'
++ echo 'nodes: 1'
++ echo 1
+1
++ echo 2012_06_15_16_01_20_766727377
+2012_06_15_16_01_20_766727377
++ cp ../../input.dat ./input.dat
++ cp ../../opac.txt ./opac.txt
++ export OMP_NUM_THREADS=16
++ OMP_NUM_THREADS=16
++ srun --nodes=1 --ntasks=1 -ppbatch -e sphot.err -o out.dat --auto-affinity=start=0,verbose,cpt=1 ../sphotCL.sh 1
+nodes=1 ntasks=1 threads-per-node=4
++ export BMARK_STRING=sphot.4
++ BMARK_STRING=sphot.4
+++ date +%Y_%m_%d_%H_%M_%S_%N
++ name=2012_06_15_16_06_53_633762257
++ mkdir 2012_06_15_16_06_53_633762257
++ cd 2012_06_15_16_06_53_633762257
++ env
++ hostname
++ echo 2012_06_15_16_06_53_633762257
++ uname -a
++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
++ grep MHz
++ echo 'threads-per-node: 4'
++ echo 'nodes: 1'
++ echo 1
+1
++ echo 2012_06_15_16_06_53_633762257
+2012_06_15_16_06_53_633762257
++ cp ../../input.dat ./input.dat
++ cp ../../opac.txt ./opac.txt
++ export OMP_NUM_THREADS=4
++ OMP_NUM_THREADS=4
++ srun --nodes=1 --ntasks=1 -ppbatch -e sphot.err -o out.dat --auto-affinity=start=0,verbose,cpt=1 ../sphotCL.sh 1

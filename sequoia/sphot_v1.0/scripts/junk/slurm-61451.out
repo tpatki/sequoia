@@ -1,0 +1,107 @@
+nodes=1 ntasks=1 threads-per-node=16
+++ export BMARK_STRING=sphot.16
+++ BMARK_STRING=sphot.16
+++ export OMP_NUM_THREADS=16
+++ OMP_NUM_THREADS=16
++++ date +%Y_%m_%d_%H_%M_%S_%N
+++ name=2012_07_05_13_19_31_947775682
+++ mkdir 2012_07_05_13_19_31_947775682
+++ cd 2012_07_05_13_19_31_947775682
+++ env
+++ hostname
+++ echo 2012_07_05_13_19_31_947775682
+++ uname -a
+++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
+++ grep MHz
+++ echo 'threads-per-node: 16'
+++ echo 'nodes: 1'
+++ echo 1
+1
+++ echo 2012_07_05_13_19_31_947775682
+2012_07_05_13_19_31_947775682
+++ cp ../../input.dat ./input.dat
+++ cp ../../opac.txt ./opac.txt
+++ srun --nodes=1 --ntasks=1 -ppbatch -e sphot.err -o out.dat --auto-affinity=start=0,verbose,cpt=1 ../sphotCL.sh
++ i=2
++ '[' 2 -le 1 ']'
+nodes=2 ntasks=2 threads-per-node=16
+++ export BMARK_STRING=sphot.16
+++ BMARK_STRING=sphot.16
+++ export OMP_NUM_THREADS=16
+++ OMP_NUM_THREADS=16
++++ date +%Y_%m_%d_%H_%M_%S_%N
+++ name=2012_07_05_13_26_46_124805726
+++ mkdir 2012_07_05_13_26_46_124805726
+++ cd 2012_07_05_13_26_46_124805726
+++ env
+++ hostname
+++ echo 2012_07_05_13_26_46_124805726
+++ uname -a
+++ grep MHz
+++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
+++ echo 'threads-per-node: 16'
+++ echo 'nodes: 2'
+++ echo 2
+2
+++ echo 2012_07_05_13_26_46_124805726
+2012_07_05_13_26_46_124805726
+++ cp ../../input.dat ./input.dat
+++ cp ../../opac.txt ./opac.txt
+++ srun --nodes=2 --ntasks=2 -ppbatch -e sphot.err -o out.dat --auto-affinity=start=0,verbose,cpt=1 ../sphotCL.sh
+srun: error: Only allocated 1 nodes asked for 2
++ i=4
++ '[' 4 -le 2 ']'
+nodes=2 ntasks=2 threads-per-node=4
+++ export BMARK_STRING=sphot.4
+++ BMARK_STRING=sphot.4
+++ export OMP_NUM_THREADS=4
+++ OMP_NUM_THREADS=4
++++ date +%Y_%m_%d_%H_%M_%S_%N
+++ name=2012_07_05_13_26_47_276668176
+++ mkdir 2012_07_05_13_26_47_276668176
+++ cd 2012_07_05_13_26_47_276668176
+++ env
+++ hostname
+++ echo 2012_07_05_13_26_47_276668176
+++ uname -a
+++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
+++ grep MHz
+++ echo 'threads-per-node: 4'
+++ echo 'nodes: 2'
+++ echo 2
+2
+++ echo 2012_07_05_13_26_47_276668176
+2012_07_05_13_26_47_276668176
+++ cp ../../input.dat ./input.dat
+++ cp ../../opac.txt ./opac.txt
+++ srun --nodes=2 --ntasks=2 -ppbatch -e sphot.err -o out.dat --auto-affinity=start=0,verbose,cpt=1 ../sphotCL.sh
+srun: error: Only allocated 1 nodes asked for 2
++ i=4
++ '[' 4 -le 2 ']'
+nodes=2 ntasks=2 threads-per-node=8
+++ export BMARK_STRING=sphot.8
+++ BMARK_STRING=sphot.8
+++ export OMP_NUM_THREADS=8
+++ OMP_NUM_THREADS=8
++++ date +%Y_%m_%d_%H_%M_%S_%N
+++ name=2012_07_05_13_26_48_418505162
+++ mkdir 2012_07_05_13_26_48_418505162
+++ cd 2012_07_05_13_26_48_418505162
+++ env
+++ hostname
+++ echo 2012_07_05_13_26_48_418505162
+++ uname -a
+++ srun --nodes=1 --ntasks=1 -ppbatch cat /proc/cpuinfo
+++ grep MHz
+++ echo 'threads-per-node: 8'
+++ echo 'nodes: 2'
+++ echo 2
+2
+++ echo 2012_07_05_13_26_48_418505162
+2012_07_05_13_26_48_418505162
+++ cp ../../input.dat ./input.dat
+++ cp ../../opac.txt ./opac.txt
+++ srun --nodes=2 --ntasks=2 -ppbatch -e sphot.err -o out.dat --auto-affinity=start=0,verbose,cpt=1 ../sphotCL.sh
+srun: error: Only allocated 1 nodes asked for 2
++ i=4
++ '[' 4 -le 2 ']'

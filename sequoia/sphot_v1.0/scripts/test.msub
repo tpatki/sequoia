@@ -1,0 +1,16 @@
+#!/bin/bash
+#MSUB -lpartition=sierra
+#MSUB -A asccasc
+#MSUB -l nodes=1
+#MSUB -q pbatch
+#MSUB -l walltime=00:45:00
+
+#Call the child script that does the runs
+
+export OMP_NUM_THREADS=12
+srun --nodes=1 --ntasks=1 -o sph2.out -e sph2.err ../sphot  
+
+#sh ./runSphot.sh 1 1 12 
+#sh ./runSphot.sh 2 2 16
+#sh ./runSphot.sh 2 2 4
+#sh ./runSphot.sh 2 2 8
