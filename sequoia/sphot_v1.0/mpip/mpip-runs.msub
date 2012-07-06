@@ -1,15 +1,15 @@
 #!/bin/bash
 #MSUB -lpartition=cab
 #MSUB -A asccasc
-#MSUB -l nodes=16
+#MSUB -l nodes=128
 #MSUB -q pbatch
-#MSUB -l walltime=02:30:00
+#MSUB -l walltime=05:30:00
 
 i=16
 minthreads=4
 
 j=1
-maxnodes=16
+maxnodes=128
 
 while [ $j -le $maxnodes ]
 do
