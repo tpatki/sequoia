@@ -6,6 +6,7 @@ Build:
 - irs_config (to see a list of predefined configs)
 - irs_config <config>
 - make depend
+- get rid of the "static" link flag from line 21 in Makefile. Results in make errors 
 - make
 
 Run:
