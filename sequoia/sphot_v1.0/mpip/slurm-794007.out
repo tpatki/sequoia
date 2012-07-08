@@ -1,0 +1,77 @@
+mpiP: 
+mpiP: mpiP: mpiP V3.3.0 (Build Nov  2 2011/14:57:14)
+mpiP: Direct questions and errors to mpip-help@lists.sourceforge.net
+mpiP: 
+mpiP: 
+mpiP: Storing mpiP output in [./sphot.1.2356.1.mpiP].
+mpiP: 
+mpiP: 
+mpiP: mpiP: mpiP V3.3.0 (Build Nov  2 2011/14:57:14)
+mpiP: Direct questions and errors to mpip-help@lists.sourceforge.net
+mpiP: 
+mpiP: 
+mpiP: Storing mpiP output in [./sphot.1.2729.1.mpiP].
+mpiP: 
+mpiP: 
+mpiP: mpiP: mpiP V3.3.0 (Build Nov  2 2011/14:57:14)
+mpiP: Direct questions and errors to mpip-help@lists.sourceforge.net
+mpiP: 
+mpiP: 
+mpiP: Storing mpiP output in [./sphot.1.2851.1.mpiP].
+mpiP: 
+mpiP: 
+mpiP: mpiP: mpiP V3.3.0 (Build Nov  2 2011/14:57:14)
+mpiP: Direct questions and errors to mpip-help@lists.sourceforge.net
+mpiP: 
+mpiP: 
+mpiP: Storing mpiP output in [./sphot.1.3244.1.mpiP].
+mpiP: 
+mpiP: 
+mpiP: mpiP: mpiP V3.3.0 (Build Nov  2 2011/14:57:14)
+mpiP: Direct questions and errors to mpip-help@lists.sourceforge.net
+mpiP: 
+mpiP: 
+mpiP: Storing mpiP output in [./sphot.2.3667.1.mpiP].
+mpiP: 
+mpiP: 
+mpiP: mpiP: mpiP V3.3.0 (Build Nov  2 2011/14:57:14)
+mpiP: Direct questions and errors to mpip-help@lists.sourceforge.net
+mpiP: 
+mpiP: 
+mpiP: Storing mpiP output in [./sphot.2.4039.1.mpiP].
+mpiP: 
+mpiP: 
+mpiP: mpiP: mpiP V3.3.0 (Build Nov  2 2011/14:57:14)
+mpiP: Direct questions and errors to mpip-help@lists.sourceforge.net
+mpiP: 
+mpiP: 
+mpiP: Storing mpiP output in [./sphot.2.4157.1.mpiP].
+mpiP: 
+mpiP: 
+mpiP: mpiP: mpiP V3.3.0 (Build Nov  2 2011/14:57:14)
+mpiP: Direct questions and errors to mpip-help@lists.sourceforge.net
+mpiP: 
+mpiP: 
+mpiP: Storing mpiP output in [./sphot.2.4266.1.mpiP].
+mpiP: 
+mpiP: 
+mpiP: mpiP: mpiP V3.3.0 (Build Nov  2 2011/14:57:14)
+mpiP: Direct questions and errors to mpip-help@lists.sourceforge.net
+mpiP: 
+mpiP: 
+mpiP: Storing mpiP output in [./sphot.4.4660.1.mpiP].
+mpiP: 
+mpiP: 
+mpiP: mpiP: mpiP V3.3.0 (Build Nov  2 2011/14:57:14)
+mpiP: Direct questions and errors to mpip-help@lists.sourceforge.net
+mpiP: 
+mpiP: 
+mpiP: Storing mpiP output in [./sphot.4.4783.1.mpiP].
+mpiP: 
+mpiP: 
+mpiP: mpiP: mpiP V3.3.0 (Build Nov  2 2011/14:57:14)
+mpiP: Direct questions and errors to mpip-help@lists.sourceforge.net
+mpiP: 
+srun: Job step aborted: Waiting up to 2 seconds for job step to finish.
+slurmd[cab42]: *** JOB 794007 CANCELLED AT 2012-07-07T21:10:34 DUE TO TIME LIMIT ***
+srun: error: cab81: task 3: Terminated
